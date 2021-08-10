@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<head>
+<script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+
+<link href='https://fonts.googleapis.com/css?family=Londrina+Shadow' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #232323;
+}
+div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Londrina Shadow', cursive;
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 30px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.first{
+  background-image: url("image.jpg");
+}
+.second{
+  background-image: url("image1.jpg");
+}
+.dessert{
+  background-image: url("image2.jpeg");
+}
+.price {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Mystery Classes</h1>
+<h2>An Educational Point To Learn, Explore and  gain Knowledge</h2>
+<div class="first">
+  <p>About Us<span class="price">$14</span><br />
+  <small>This is one educational site where you can learn about what you love. Basics would include all the content upto class 12th and even higher courses. all you ahave to do is just be patient and gain knowloedge with your best of interest. </small></p>
+</div>
+
+<div class="second">
+  <p>What all do we focus on?<span class="price">$22</span><br />
+  <small>Firstly, the student have to selectthere respective interest in whatever he/she wants to gain knowledge about, Then we can study your interest deeply and reccomend you the best qualified metors, after that you will be able to access your account by registering your record and creatng your own account.</small></p>
+</div>
+  
+<div class="dessert">
+  <p>Would it cost anything for the consultation?<span class="price">$8</span><br />
+  <small>NO, we do not charge for the consultations but the only condition would be that you should register for further knowledge so that every individual could be supervised properly as per there interest.</small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
